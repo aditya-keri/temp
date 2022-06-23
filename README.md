@@ -18,18 +18,14 @@
 <a href="https://apps.apple.com/us/app/betterhalf-ai-matrimony-app/id1438203766?itsct=apps_box_badge&amp;itscg=30200">
   <img src="https://miro.medium.com/max/600/1*xqT83bMEz92IBYxS9UQNow.png" alt="Download on the App Store" style="border-radius: 13px">
 </a>
-
   </div>
-  
+ 
   <br />
 
 <p align="center">
 Built With ❤️ :
   React Native, TypeScript, Redux, React Query
 </p>
-<br/>
-<br/>
-
 
 ___
 
