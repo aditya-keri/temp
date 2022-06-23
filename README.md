@@ -24,10 +24,10 @@
 
 <p align="center">
 Built With ❤️ :
-  React Native, TypeScript, Redux, React Query
+  React Native, TypeScript, Redux, React Query & more.
 </p>
 
-___
+---
 
 ## Installation
 
@@ -44,6 +44,7 @@ yarn
 ```
 
 3. Install pods for iOS : _(No special steps required for Android)_
+
 ```
 npx pod-install
 ```
@@ -51,11 +52,13 @@ npx pod-install
 ## Run the app on Device or Simulator
 
 #### iOS :
+
 ```
 yarn ios
 ```
 
 #### Android :
+
 ```
 yarn android
 ```
@@ -64,14 +67,16 @@ Running either of these commands automatically starts the Metro bundler and then
 If you want to run the Metro bundler instance separately and then build the app, you can :
 
 Start the Metro bundler :
+
 ```
-yarn start 
+yarn start
 ```
+
 Then run the app in Android `yarn android` or iOS `yarn ios`
 
 ## FAQ :
 
 ### Why are we running npx pod-install instead of (cd ios && pod install) ?
+
 [You can read in detail here](https://github.com/expo/expo-cli/tree/main/packages/pod-install#-why). But the gist is : `npx pod-install` performs any additional
 checks in case pod installation errors out and tries to resolve it, which is not done by `pod install`.
-
