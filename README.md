@@ -74,9 +74,39 @@ yarn start
 
 Then run the app in Android `yarn android` or iOS `yarn ios`
 
+## Building the app
+
+#### Android
+_Prerequisite : Make sure you have the keystore required for signing the Android builds_
+1. Open Android Studio
+2. Open the `android` folder from our project in Android Studio
+3. Click on Project on the menu bar -> `Clean Project`. Wait for this process to complete.
+4. Click on Project on the menu bar again -> `Generate Signed Bundle / Apk...`
+5. Select Android App Bundle. Click on next.
+6. Point the Key store path to the download keystore and fill the other fields. Reach out to the team to enquire about the password and alias. Click on next.
+7. Check the Destination Folder. Select the build variant and click on Finish.
+8. Once the process is complete, the `aab` will be generated.
+
+### iOS
+_Prerequisite : Make sure you have the certificates required for building iOS dev and production builds. Reach out to [Joy Patel](https://github.com/joy-betterhalf) for the same_
+1. Open XCode.
+2. Open `betterhalf` project so that it shows in the main content panel on the right.
+3. Click on Product on the menu bar -> `Clean Build Folder`. Wait for this process to complete.
+4. Click on Product on the menu bar again -> `Archive`. Wait for this process to complete.
+5. Once the Build succeeds, the Archives window automatically opens up. Select your archive and click on `Distribute App`.
+6. Select `Development` and click on Next. Click on Next again in the following window.
+7. In the `betterhalf.app` input, select the relevant Development profile. Click on Next.
+8. Once the process is complete, the `ipa` will be generated.
+
+## Important Links
+[Front-end Engineering - Design, Architecture & Best Practices](https://betterhalf-product.atlassian.net/wiki/spaces/P/pages/1624178699/Front-end+Engineering+-+Design+Architecture+Best+Practices)
+
 ## FAQ :
 
-### Why are we running npx pod-install instead of (cd ios && pod install) ?
+### 1. Why are we running npx pod-install instead of (`cd ios && pod install`) ?
 
 [You can read in detail here](https://github.com/expo/expo-cli/tree/main/packages/pod-install#-why). But the gist is : `npx pod-install` performs any additional
 checks in case pod installation errors out and tries to resolve it, which is not done by `pod install`.
+
+### 2. What is the right way to clean the project if I see any errors while building the app ?
+Based on what error you're facing and the platform, you can try one of the clean commands [listed here](https://github.com/pmadruga/react-native-clean-project#content).
